@@ -1,0 +1,106 @@
+.Dolar {
+  width: 100%;
+  height: 33em;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  background: #29313A;
+}
+
+.Dolar .main-banner {
+  padding: 2em;
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Dolar .main-banner img {
+  width: 6em;
+  height: 6em;
+  border: 0.05em #f4f9ff solid;
+}
+
+.Dolar .main-banner h1 {
+  margin-left: 0.3em;
+  font-family: Mont;
+  font-size: 5rem;
+  color: #f4f9ff;
+}
+
+.Dolar .Arrow {
+  display: flex;
+  align-items: center;
+  content: "8644";
+  color: #EDF1FF;
+  font-size: 4rem;
+  padding: .1em;
+}
+
+.Dolar .conversor-container {
+  width: 60em;
+  margin: 2em;
+  display: flex;
+  justify-content: center;
+  height: 15em;
+  font-family: Mont;
+}
+
+.dollar-scroll-header {
+  display: flex;
+  width: 100%;
+  background: #002868;
+  align-items: center;
+  justify-content: center;
+}
+
+.dollar-scroll-header .dollar-menu {
+  height: 5em;
+  display: flex;
+  align-items: center;
+}
+
+.dollar-scroll-header .dollar-menu li {
+  padding: 0 6em;
+}
+
+.dollar-scroll-header .dollar-menu li a {
+  font-family: Roboto;
+  font-size: 1.6rem;
+  color: #f4f9ff;
+}
+
+.dollar-scroll-header .dollar-menu li a:hover {
+  color: #ffffff;
+  padding-bottom: 0.5em;
+  border-bottom: 0.2rem solid #ffffff;
+}
+
+.dollar-scroll-header .dollar-menu li a:focus {
+  padding-bottom: 0.5em;
+  border-bottom: 0.2rem solid #ffffff;
+}
+
+.dolarcomercial-info {
+  height: 30em;
+}
+
+@media (max-width: 800px) {
+  .Dolar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    height: 100%;
+    padding: 0;
+  }
+  .Dolar .valor-comercial {
+    height: 45%;
+    width: 70%;
+  }
+  .Dolar .valor-turismo {
+    height: 45%;
+    width: 70%;
+  }
+}

@@ -1,0 +1,32 @@
+@import '_Fontes';
+
+.grafico-container {
+    display: flex;
+    flex-direction: column;
+    height: 30em;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #EDF1FF;
+    .Grafico{
+        background-color: #EDF1FF;
+        border-radius: 5px;
+        height: 100%;
+        width: 60%;
+        padding: 1em;
+    }
+    .grafico-header{
+        display: flex;
+        padding: .5em;
+        justify-content: center;
+        align-items: center; 
+        width: 100%;
+        height: 3em;
+        background: #EDF1FF;
+        color: 243A5E;
+        font-size: 3em;
+        font-family: Roboto;
+    }
+   
+}
+

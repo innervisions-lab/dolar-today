@@ -1,0 +1,180 @@
+@import "_Fontes";
+@import "_config";
+// .header {
+//     // align-items: center;
+//     // height: 100%
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     border-bottom: 0.2em solid transparent;
+//     background-image: linear-gradient(#201f2b, #29313a),
+//         radial-gradient(circle, #19d7f8, #19d7f8);
+//     background-origin: border-box;
+//     background-clip: content-box, border-box;
+
+//     .logo {
+//         margin: auto;
+//     }
+//     .menu {
+//         // border: $default-border;
+//         width: 80%;
+//         height: 100%;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+
+//         ul {
+//             // width: 80%;
+//             // border: $default-border2;
+//             display: grid;
+//             grid-template-columns: repeat(4, 7rem);
+//             list-style: none;
+//             justify-content: center;
+//             gap: 0.1rem;
+
+//             li {
+//                 // align-items: center;
+//                 // margin: 0 2rem;
+//                 a {
+//                     border: $default-border;
+//                     padding: 0.8rem;
+//                     background: red;
+//                     display: block;
+//                     text-align: center;
+//                     font-family: Quicksand;
+//                     font-size: 1.2rem;
+//                     // font-weight: 700;
+//                     color: white;
+//                     text-decoration: none;
+
+//                     &:hover,
+//                     &:focus {
+//                         color: #3a4c96;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+//     .sobre {
+//         margin: auto;
+//     }
+// }
+
+// @media screen and (max-width: 675px) {
+//     .header {
+//         .logo {
+//             display: none;
+//         }
+//         .menu {
+//             // flex-direction: column;
+//             ul {
+//                 grid-template-columns: 1fr;
+//             }
+//         }
+//         .sobre{
+//         display: none;
+
+//         }
+//     }
+// }
+
+.header-container {
+    border-bottom: 0.15rem solid;
+    border-image: radial-gradient(ellipse, #e6e9ed, #53b86a) 1;
+    // background: #EDF1FF;
+}
+
+.header {
+    display: flex;
+    width: 90em;
+    margin: auto;
+    align-items: center;
+    font-family: Quicksand;
+    padding: 0 3em;
+    height: 3.8em;
+    justify-content: space-between;
+    // background-color: #EDF1FF;
+
+    .header-menu {
+        display: flex;
+        // flex: .3;
+
+        li {
+            padding: 0 2em;
+
+            a {
+                font-size: 1.25rem;
+                // font-weight: 400;
+                // font-weight: 600;
+                color: #232b2b;
+
+                &:hover,
+                &:focus {
+                    color: #53b86a;
+                    border-bottom: 0.1rem solid #53b86a;
+                }
+            }
+        }
+    }
+}
+.menu-btn {
+    position: absolute;
+    cursor: pointer;
+    top: 1em;
+    left: 1em;
+    z-index: 2;
+    display: none;
+}
+
+@media (max-width: 860px) {
+    .header {
+        height: 3em;
+        width: 100%;
+        padding: 0;
+        .Logo {
+            padding-left: 2.7em;
+            margin: auto;
+        }
+        .Sobre {
+            padding-right: 1em;
+            font-size: 0.8rem;
+        }
+
+        .header-menu {
+            display: block;
+            position: absolute;
+            top: 3em;
+            left: 0;
+            background: #e6e9ed;
+            width: 50%;
+            height: 100%;
+            transform: translateX(-50em);
+            transition: transform 0.5s ease-in-out;
+            border-right: #ccc 0.1em solid;
+            opacity: 0.9;
+            padding: 2em;
+
+            li {
+                padding: 1em;
+                border-bottom: 0.1em #ccc solid;
+
+                &:last-child {
+                    border-bottom: 0;
+                }
+            }
+        }
+
+        .header-menu.show {
+            transform: translateX(-0.5em);
+        }
+    }
+
+    .menu-btn {
+        display: block;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}
