@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 export default (props) => {
     return (
         <header className="header-container">
-            
             <div
                 className="menu-btn"
                 onClick={(e) =>
@@ -14,7 +13,7 @@ export default (props) => {
                 }
             >
                 <i className="fas fa-bars"></i>
-            </div> 
+            </div>
             <nav className="header">
                 <Link to="/" className="Logo">
                     <span className="logo1">dolarhoje</span>
@@ -35,7 +34,13 @@ export default (props) => {
                         <Link to="/bitcoinhoje">Bitcoin </Link>
                     </li>
                 </ul>
-                <a href="#" className="Sobre" onClick="document.getElementById('middle').scrollIntoView(true);">Sobre</a>
+                <a
+                    href="#"
+                    className="Sobre"
+                    onClick="document.getElementById('middle').scrollIntoView(true);"
+                >
+                    Sobre
+                </a>
             </nav>
         </header>
     );

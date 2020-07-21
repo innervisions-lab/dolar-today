@@ -41,26 +41,28 @@
   width: 100%;
   justify-content: center;
   align-items: center;
-  background-color: #EDF1FF;
+  background-color: #edf1ff;
 }
 
 .grafico-container .Grafico {
-  background-color: #EDF1FF;
+  background-color: #edf1ff;
   border-radius: 5px;
   height: 100%;
-  width: 60%;
-  padding: 1em;
+  width: 95%;
+  padding: 1rem;
 }
 
 .grafico-container .grafico-header {
   display: flex;
-  padding: .5em;
-  justify-content: center;
-  align-items: center;
+  width: 50%;
+  margin-top: 2rem;
+}
+
+.grafico-container .grafico-header h2 {
   width: 100%;
-  height: 3em;
-  background: #EDF1FF;
-  color: 243A5E;
-  font-size: 3em;
-  font-family: Roboto;
+  font-family: Mont-Medium;
+  font-size: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: #125c6d;
 }

@@ -1,71 +1,15 @@
-// import React, { useState, useEffect } from "react";
-// import "../../styles/css/Bitcoin.css";
-// import { BTC_URL } from "../../../utils/URLS";
-// import axios from "axios";
-
-// export default (params) => {
-//     const [cambio, setValor] = useState("");
-//     const [data, setData] = useState("");
-//     const [hora, setHora] = useState("");
-
-//     useEffect(() => {
-//         buscarCambio();
-//     }, []);
-
-//     const buscarCambio = async () => {
-//         const dataAPI = await axios({
-//             method: "GET",
-//             url: BTC_URL,
-//         })
-//             .then((response) => {
-//                 return response.data;
-//                 //const valor = parseFloat(response.data.BTC.ask).toFixed(2);
-//                 //const data = response.data.BTC.create_date;
-//                 //this.setState({ valor, data });
-//             })
-//             .catch((error) => {
-//                 console.log(error);
-//             });
-
-//         const cambio = dataAPI.BTC.ask;
-//         const split = dataAPI.BTC.create_date.split(" ");
-//         const aux = split[0].split("-");
-//         const data_formatada = aux[2] + "/" + aux[1] + "/" + aux[0];
-//         const hora = split[1];
-//         setValor(cambio);
-//         setData(data_formatada);
-//         setHora(hora);
-//     };
-
-//     return (
-//         <div className="Bitcoin">
-//             <div className="nome-moeda">
-//                 <h1>Bitcoin Hoje</h1>
-//             </div>
-
-//             <div className="valor">
-//                 <p className="cifrao">{`R$`}</p>
-//                 <p className="cambio"> {`${cambio}`}</p>
-//             </div>
-
-//             <div className="atualizado">
-//                 <p>{`Atualizado em: ${data} as ${hora}`}</p>
-//             </div>
-//         </div>
-//     );
-// };
 import React, { useState, useEffect, Fragment } from "react";
 import "../../styles/css/Bitcoin.css";
-import buscarCambio from "../utils/BuscarCambio";
-import Conversor from "../utils/Conversor";
-import Grafico from "../utils/Grafico";
+import buscarCambio from "../BuscarCambio";
+import Conversor from "../Conversor";
+import Grafico from "../Grafico";
 import Banner_Flag from "../../assets/icons/btc.png";
 import Origem_Flag_Icon from "../../assets/icons/btc.png";
 import Destino_Flag_Icon from "../../assets/icons/br.png";
 
 export default (params) => {
     const [Cambio, setCambio] = useState("");
-    const [Valor, setaValor] = useState(1.0.toFixed(2))
+    const [Valor, setaValor] = useState((1.0).toFixed(2));
     const [origemInput, setaorigemInput] = useState("origem");
     let valorOrigem, valorDestino;
     if (origemInput === "origem") {
@@ -135,16 +79,26 @@ export default (params) => {
                     </li>
                 </ul>
             </nav>
-            <Grafico moeda="BTC"/>
-            <div className="bitcoincomercial-info"><p>
-            Bitcoin 
-
-É uma criptomoeda descentralizada ou um dinheiro eletrônico para transações peer-to-peer, foi criada em 2008 por um programador que tinha o pseudônimo Satashi Nakamoto. Ela é considerada a primeira o  primeiro dinheiro eletrônico do mundo descentralizada, ela é responsável pelo ressurgimento do SBL(Sistema Bancário Livre).
-
-Como funciona o Bitcoin?
-Ela é formada por uma base criptografada. A criptografia é o que garante que o sistema funcione e que todas as transações sejam feitas de forma segura e anônima. Por tal motivo, o Bitcoin é também conhecido por criptomoeda.
-
-Como o Bitcoin não é regularizado por nenhuma entidade financeira, o processo de transação dela, é realidade pelos mineradores. Por tal motivo, entender o que é o mercado e como ele funciona é de suma importância para tomar qualquer decisão dentro do mundo do Bitcoin.</p></div>
+            <Grafico moeda="BTC" title="Variação Dolar x Bitcoin" />
+            <div className="bitcoincomercial-info">
+                <p>
+                    Bitcoin É uma criptomoeda descentralizada ou um dinheiro
+                    eletrônico para transações peer-to-peer, foi criada em 2008
+                    por um programador que tinha o pseudônimo Satashi Nakamoto.
+                    Ela é considerada a primeira o primeiro dinheiro eletrônico
+                    do mundo descentralizada, ela é responsável pelo
+                    ressurgimento do SBL(Sistema Bancário Livre). Como funciona
+                    o Bitcoin? Ela é formada por uma base criptografada. A
+                    criptografia é o que garante que o sistema funcione e que
+                    todas as transações sejam feitas de forma segura e anônima.
+                    Por tal motivo, o Bitcoin é também conhecido por
+                    criptomoeda. Como o Bitcoin não é regularizado por nenhuma
+                    entidade financeira, o processo de transação dela, é
+                    realidade pelos mineradores. Por tal motivo, entender o que
+                    é o mercado e como ele funciona é de suma importância para
+                    tomar qualquer decisão dentro do mundo do Bitcoin.
+                </p>
+            </div>
         </Fragment>
     );
 };

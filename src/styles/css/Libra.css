@@ -1,11 +1,11 @@
 .Libra {
+  display: grid;
   width: 100%;
   height: 33em;
-  display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   justify-content: center;
   align-items: center;
-  background: #29313A;
+  background: #29313a;
 }
 
 .Libra .main-banner {
@@ -19,13 +19,14 @@
 .Libra .main-banner img {
   width: 6em;
   height: 6em;
+  border: 0.05em #f4f9ff solid;
 }
 
 .Libra .main-banner h1 {
   margin-left: 0.3em;
   font-family: Mont;
   font-size: 5rem;
-  color: #ffffff;
+  color: #f4f9ff;
 }
 
 .Libra .conversor-container {
@@ -58,39 +59,20 @@
 .libra-scroll-header .libra-menu li a {
   font-family: Roboto;
   font-size: 1.6rem;
-  color: #ffffff;
+  color: #f4f9ff;
 }
 
 .libra-scroll-header .libra-menu li a:hover {
-  color: #ffffff;
+  color: #a7092a;
   padding-bottom: 0.5em;
-  border-bottom: 0.2rem solid #ffffff;
+  border-bottom: 0.2rem solid #a7092a;
 }
 
 .libra-scroll-header .libra-menu li a:focus {
   padding-bottom: 0.5em;
-  border-bottom: 0.2rem solid #ffffff;
+  border-bottom: 0.2rem solid #a7092a;
 }
 
-.Libracomercial-info {
+.eurocomercial-info {
   height: 30em;
-}
-
-@media (max-width: 800px) {
-  .Libra {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5em;
-    height: 100%;
-    padding: 0;
-  }
-  .Libra .valor-comercial {
-    height: 45%;
-    width: 70%;
-  }
-  .Libra .valor-turismo {
-    height: 45%;
-    width: 70%;
-  }
 }

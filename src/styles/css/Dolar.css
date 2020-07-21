@@ -1,11 +1,11 @@
 .Dolar {
-  width: 100%;
-  height: 33em;
   display: grid;
+  width: 100%;
+  height: 35em;
   grid-template-rows: 1fr 1fr 1fr;
   justify-content: center;
   align-items: center;
-  background: #29313A;
+  background: #2F4858;
 }
 
 .Dolar .main-banner {
@@ -33,9 +33,9 @@
   display: flex;
   align-items: center;
   content: "8644";
-  color: #EDF1FF;
+  color: #edf1ff;
   font-size: 4rem;
-  padding: .1em;
+  padding: 0.1em;
 }
 
 .Dolar .conversor-container {
@@ -50,7 +50,7 @@
 .dollar-scroll-header {
   display: flex;
   width: 100%;
-  background: #002868;
+  background: #125c6d;
   align-items: center;
   justify-content: center;
 }
@@ -72,35 +72,85 @@
 }
 
 .dollar-scroll-header .dollar-menu li a:hover {
-  color: #ffffff;
+  color: #a7092a;
   padding-bottom: 0.5em;
-  border-bottom: 0.2rem solid #ffffff;
+  border-bottom: 0.2rem solid #a7092a;
 }
 
 .dollar-scroll-header .dollar-menu li a:focus {
   padding-bottom: 0.5em;
-  border-bottom: 0.2rem solid #ffffff;
+  border-bottom: 0.2rem solid #a7092a;
 }
 
-.dolarcomercial-info {
-  height: 30em;
+.dolar-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: #edf1ff;
+}
+
+.dolar-info .dolarcomercial-info,
+.dolar-info .dolarturismo-info {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.dolar-info .dolarcomercial-info h2,
+.dolar-info .dolarturismo-info h2 {
+  width: 100%;
+  font-family: Mont-Medium;
+  font-size: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: #125c6d;
+}
+
+.dolar-info .dolarcomercial-info p,
+.dolar-info .dolarturismo-info p {
+  padding: .3em;
+  line-height: 2rem;
+  font-family: Roboto;
+  font-size: 1.2rem;
+  color: #41493a;
+  text-align: justify;
+}
+
+.dolar-info .dolarcomercial-info h3,
+.dolar-info .dolarturismo-info h3 {
+  padding: .3em;
+  font-family: Mont-Medium;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #125c6d;
+}
+
+.dolar-info .dolarcomercial-info h2 {
+  margin-top: 3em;
 }
 
 @media (max-width: 800px) {
   .Dolar {
-    display: flex;
-    flex-direction: column;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 50em;
+    justify-content: center;
     align-items: center;
-    gap: 0.5em;
-    height: 100%;
+  }
+  .Dolar .main-banner {
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+  .Dolar .conversor-container {
+    width: 50%;
+    flex-direction: column;
+    margin-top: 1em;
     padding: 0;
   }
-  .Dolar .valor-comercial {
-    height: 45%;
-    width: 70%;
-  }
-  .Dolar .valor-turismo {
-    height: 45%;
-    width: 70%;
+  .Dolar .conversor-container .conversor-origem {
+    margin-bottom: 3em;
   }
 }

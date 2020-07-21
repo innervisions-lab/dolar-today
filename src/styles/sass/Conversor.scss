@@ -8,6 +8,9 @@
     background: #edf1ff;
     height: 100%;
     width: 28em;
+    // box-shadow: .1rem .1rem .1rem .1rem;
+    border-radius: .2rem;
+    
     .flag-container {
         // border: 0.1em red solid;
         display: flex;
@@ -15,11 +18,13 @@
         align-items: center;
         padding: 1em 1.5em;
         // padding: 0 1.5em;
-        background: #29313a;
+        background: #125c6d;
+        
         .flag {
             width: 2.5em;
             height: 2.5em;
             margin-left: 1em;
+            
         }
         .moeda {
             color: #edf1ff;
@@ -84,5 +89,8 @@
 @media (max-width: 860px) {
     .Conversor {
         flex-direction: column;
+        margin: 1em;
+        
+
     }
 }

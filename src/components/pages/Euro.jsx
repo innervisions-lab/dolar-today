@@ -1,8 +1,8 @@
 import React, { useState, useEffect,Fragment } from "react";
 import "../../styles/css/Euro.css";
-import buscarCambio from "../utils/BuscarCambio";
-import Conversor from "../utils/Conversor";
-import Grafico from "../utils/Grafico";
+import buscarCambio from "../BuscarCambio";
+import Conversor from "../Conversor";
+import Grafico from "../Grafico";
 import Banner_Flag from "../../assets/icons/eu-flat.png"
 import Origem_Flag_Icon from "../../assets/icons/eu.png";
 import Destino_Flag_Icon from "../../assets/icons/br.png";
@@ -45,7 +45,7 @@ export default (params) => {
                 <section className="Euro">
                     <div className="main-banner">
                         <img src={Banner_Flag} alt="" />
-                        <h1>Euro Hoje </h1>
+                        <h1>Euro Hoje</h1>
                     </div>
                     <div className="conversor-container">
                         <Conversor
@@ -78,7 +78,7 @@ export default (params) => {
                         </li>
                     </ul>
                 </nav>
-                <Grafico moeda="EUR"/>
+                <Grafico moeda="EUR" title="Variação Dolar x Euro"/>
                 <div className="eurocomercial-info">
 
                     <p>Euro

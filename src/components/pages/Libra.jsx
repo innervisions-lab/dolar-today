@@ -1,11 +1,11 @@
 import React, { useState, useEffect,Fragment } from "react";
 import "../../styles/css/Libra.css";
-import Conversor from "../utils/Conversor";
-import Grafico from "../utils/Grafico";
+import buscarCambio from "../BuscarCambio";
+import Conversor from "../Conversor";
+import Grafico from "../Grafico";
 import Banner_Flag from "../../assets/icons/uk-flat.png"
 import Origem_Flag_Icon from "../../assets/icons/uk.png";
 import Destino_Flag_Icon from "../../assets/icons/br.png";
-import buscarCambio from "../utils/BuscarCambio";
 
 export default (params) => {
     const [Cambio, setCambio] = useState("");
@@ -81,7 +81,7 @@ export default (params) => {
                         </li>
                     </ul>
                 </nav>
-                <Grafico moeda = "GBP"/>
+                <Grafico moeda = "GBP" title="Variação Dolar x Libra"/>
                 <div className="libracomercial-info"><p>A Libra esterlina
  Libra Esterlina é a moeda oficial de todo o Reino Unido, ela é considerada uma das mais antigas do mundo em circulação.
 

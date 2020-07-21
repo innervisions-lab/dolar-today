@@ -34,17 +34,6 @@
   src: url("../fonts/OpenSans-Regular.ttf");
 }
 
-.main {
-  width: 100%;
-  margin: auto;
-  justify-content: center;
-  display: flex;
-  justify-items: center;
-  font-family: Quicksand;
-  background: #A6BE47;
-  color: #232b2b;
-}
-
 @media (max-width: 800px) {
   .main {
     width: 100%;
