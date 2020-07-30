@@ -8,6 +8,33 @@ import Origem_Flag_Icon from "../../assets/icons/us.png";
 import Destino_Flag_Icon from "../../assets/icons/br.png";
 import ScrollToTop from "../ScrollToTop";
 import { useRef } from "react";
+import Carousel from 'react-bootstrap/Carousel';
+import dollarum from "../../assets/moedas/Moedas americanas/1dollar.jpg";
+import dollarumv from "../../assets/moedas/Moedas americanas/1dollarV.jpg";
+import dollardois from "../../assets/moedas/Moedas americanas/2dollar.jpg";
+import dollardoisv from "../../assets/moedas/Moedas americanas/2dollarV.jpg";
+import dollarcinco from "../../assets/moedas/Moedas americanas/5dollar.jpg";
+import dollarcincov from "../../assets/moedas/Moedas americanas/5dollarV.jpg";
+import dollardez from "../../assets/moedas/Moedas americanas/10dollar.jpg";
+import dollardezv from "../../assets/moedas/Moedas americanas/10dollarV.jpg";
+import dollarvinte from "../../assets/moedas/Moedas americanas/20dollar.jpg";
+import dollarvintev from "../../assets/moedas/Moedas americanas/20dollarV.jpg";
+import dollarcinquenta from "../../assets/moedas/Moedas americanas/50dollar.jpg";
+import dollarcinquentav from "../../assets/moedas/Moedas americanas/50dollarV.jpg";
+import dollarcem from "../../assets/moedas/Moedas americanas/100dollar.jpg";
+import dollarcemv from "../../assets/moedas/Moedas americanas/100dollarV.jpg";
+import dollarcentum from "../../assets/moedas/Moedas americanas/1cent.png";
+import dollarcentumv from "../../assets/moedas/Moedas americanas/1centV.png";
+import dollarcentcinco from "../../assets/moedas/Moedas americanas/5cent.png";
+import dollarcentcincov from "../../assets/moedas/Moedas americanas/5centV.png";
+import dollarcentdez from "../../assets/moedas/Moedas americanas/10cent.png";
+import dollarcentdezv from "../../assets/moedas/Moedas americanas/10centV.png";
+import dollarcent25 from "../../assets/moedas/Moedas americanas/25cent.png";
+import dollarcent25v from "../../assets/moedas/Moedas americanas/25centV.jpg";
+import dollarcent50 from "../../assets/moedas/Moedas americanas/50cent.png";
+import dollarcent50v from "../../assets/moedas/Moedas americanas/50centV.png";
+
+
 
 export default (params) => {
     const [Cambio, setCambio] = useState("");
@@ -22,6 +49,12 @@ export default (params) => {
         valorDestino = Valor;
         valorOrigem = valorDestino / Cambio;
     }
+
+    const [index, setIndex] = useState(0);
+
+    const handleSelect = (selectedIndex, e) => {
+        setIndex(selectedIndex);
+    };
 
     useEffect(() => {
         buscar();
@@ -51,8 +84,15 @@ export default (params) => {
             behavior: "smooth",
         });
 
+    const truee = true;
+
     return (
+
+
         <Fragment>
+
+
+
             <ScrollToTop />
             <section className="Dolar">
                 <div className="main-banner">
@@ -115,7 +155,7 @@ export default (params) => {
                         os efeitos sobre as exportações, mantendo um valor
                         viável para balança comercial brasileira.
                     </p>
-                    <h3>Dólar Ptax</h3>
+                    <p>Dólar Ptax</p>
                     <p>
                         Fixada pelo Banco Central, o dólar Ptax é a taxa de
                         câmbio calculada que equivale a média de todas as
@@ -143,10 +183,234 @@ export default (params) => {
                     </p>
                     <p>Sendo assim mais caro que o dólar comercial</p>
 
-                    <h3>Dólar Paralelo</h3>
+                    <p>Dólar Paralelo</p>
                 </div>
+
                 <div className="sobreodolar-info">
-                    <h2>Sobre o Dólar</h2>
+
+                    <h2>Notas Atuais</h2>
+
+                    <Carousel className="Carousel">
+                        <Carousel.Item className='carousel-item'>
+                            <img
+                                className="carousel-img"
+                                src={dollarum}
+                                alt="Nota de 1 Dolar"
+                            />
+
+                            <img
+                                className="carousel-imgV"
+                                src={dollarumv}
+                                alt="Nota de 1 Dolar"
+                            />
+                            <Carousel.Caption className="carousel-caption">
+                                <p>Desenho no anverso: George Washington</p>
+                                <p>Desenho no inverso: Illuminati</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item className='carousel-item'>
+                            <img
+                                className="carousel-img"
+                                src={dollardois}
+                                alt="Third slide"
+                            />
+
+                            <img
+                                className="carousel-imgV"
+                                src={dollardoisv}
+                                alt="Nota de 1 Dolar"
+                            />
+
+                            <Carousel.Caption className="carousel-caption">
+                                <p>Desenho no anverso: Thomas Jefferson</p>
+                                <p>Desenho no inverso: Declaração da Independência</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+
+                        <Carousel.Item className='carousel-item'>
+                            <img
+                                className="carousel-img"
+                                src={dollarcinco}
+                                alt="Third slide"
+                            />
+
+                            <img
+                                className="carousel-imgV"
+                                src={dollarcincov}
+                                alt="Nota de 1 Dolar"
+                            />
+
+                            <Carousel.Caption className="carousel-caption">
+                                <p>Desenho no anverso: Abraham Lincoln	</p>
+                                <p>Desenho no inverso: Lincoln Memorial</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item className='carousel-item'>
+                            <img
+                                className="carousel-img"
+                                src={dollardez}
+                                alt="Third slide"
+                            />
+
+                            <img
+                                className="carousel-imgV"
+                                src={dollardezv}
+                                alt="Nota de 1 Dolar"
+                            />
+
+                            <Carousel.Caption className="carousel-caption">
+                                <p>Desenho no anverso: Alexander Hamilton</p>
+                                <p>Desenho no inverso: Prédio do Tesouro</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item className='carousel-item'>
+                            <img
+                                className="carousel-img"
+                                src={dollarvinte}
+                                alt="Third slide"
+                            />
+
+                            <img
+                                className="carousel-imgV"
+                                src={dollarvintev}
+                                alt="Nota de 1 Dolar"
+                            />
+
+                            <Carousel.Caption className="carousel-caption">
+                                <p>Desenho no anverso: Andrew Jackson</p>
+                                <p>Desenho no inverso: Casa Branca</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item className='carousel-item'>
+                            <img
+                                className="carousel-img"
+                                src={dollarcinquenta}
+                                alt="Third slide"
+                            />
+
+                            <img
+                                className="carousel-imgV"
+                                src={dollarcinquentav}
+                                alt="Nota de 1 Dolar"
+                            />
+
+                            <Carousel.Caption className="carousel-caption">
+                                <p>Desenho no anverso: Ulysses S. Grant</p>
+                                <p>Desenho no inverso: Capitólio</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item className='carousel-item'>
+                            <img
+                                className="carousel-img"
+                                src={dollarcem}
+                                alt="Third slide"
+                            />
+
+                            <img
+                                className="carousel-imgV"
+                                src={dollarcemv}
+                                alt="Nota de 1 Dolar"
+                            />
+
+                            <Carousel.Caption className="carousel-caption">
+                                <p>Desenho no anverso: Benjamin Franklin</p>
+                                <p>Desenho no inverso: 	Independence Hall</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item className='carousel-item'>
+                            <img
+                                className="carousel-img"
+                                src={dollarcentum}
+                                alt="Third slide"
+                            />
+
+                            <img
+                                className="carousel-imgV"
+                                src={dollarcentumv}
+                                alt="Nota de 1 Dolar"
+                            />
+
+                            <Carousel.Caption className="carousel-caption">
+                                <p>Desenho no anverso: Abraham Lincoln</p>
+                                <p>Desenho no inverso: Escudo da União</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item className='carousel-item'>
+                            <img
+                                className="carousel-img"
+                                src={dollarcentcinco}
+                                alt="Third slide"
+                            />
+
+
+                            <img
+                                className="carousel-imgV"
+                                src={dollarcentcincov}
+                                alt="Nota de 1 Dolar"
+                            />
+                            <Carousel.Caption className="carousel-caption">
+                                <p>Desenho no anverso: Thomas Jefferson</p>
+                                <p>Desenho no inverso: Monticello</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item className='carousel-item'>
+                            <img
+                                className="carousel-img"
+                                src={dollarcentdez}
+                                alt="Third slide"
+                            />
+
+                            <img
+                                className="carousel-imgV"
+                                src={dollarcentdezv}
+                                alt="Nota de 1 Dolar"
+                            />
+
+                            <Carousel.Caption className="carousel-caption">
+                                <p>Desenho no anverso: Franklin D. Roosevelt</p>
+                                <p>Desenho no inverso: Tocha, ramo de carvalho, ramo de oliva</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item className='carousel-item'>
+                            <img
+                                className="carousel-img"
+                                src={dollarcent25}
+                                alt="Third slide"
+                            />
+
+
+                            <img
+                                className="carousel-imgV"
+                                src={dollarcent25v}
+                                alt="Nota de 1 Dolar"
+                            />
+
+                            <Carousel.Caption className="carousel-caption">
+                                <p>Desenho no anverso: George Washington</p>
+                                <p>Desenho no inverso: Illuminati</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item className='carousel-item'>
+                            <img
+                                className="carousel-img"
+                                src={dollarcent50}
+                                alt="Third slide"
+                            />
+
+                            <img
+                                className="carousel-imgV"
+                                src={dollarcent50v}
+                                alt="Nota de 1 Dolar"
+                            />
+
+                            <Carousel.Caption className="carousel-caption">
+                                <p>Desenho no anverso: George Washington</p>
+                                <p>Desenho no inverso: Illuminati</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+
+
+                    </Carousel>
                     <p>
                         {` O dólar dos Estados Unidos (US Dollar, USD, US$) é a
                         moeda emitida pelos Estados Unidos através da Reserva
@@ -162,7 +426,7 @@ export default (params) => {
                     </p>
                 </div>
             </section>
-        </Fragment>
+        </Fragment >
     );
 };
 
@@ -176,7 +440,7 @@ export default (params) => {
     instituições financeiras e empresas.
     </p>
     </div>
-
+ 
             <div className="valor-turismo">
                 <span className="titulo">{`Dólar Turismo`}</span>
                 <p>

@@ -35,7 +35,8 @@
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
@@ -63,9 +64,14 @@ ul {
 .app {
   position: relative;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: gray;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .scroll-to-top {
@@ -82,14 +88,28 @@ ul {
 .scroll-to-top .icon {
   margin-top: 16px;
   margin-left: 18px;
-  animation: scrollTop 0.5s alternate ease infinite;
+  -webkit-animation: scrollTop 0.5s alternate ease infinite;
+          animation: scrollTop 0.5s alternate ease infinite;
+}
+
+@-webkit-keyframes scrollTop {
+  from {
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+  }
+  to {
+    -webkit-transform: translateY(-1px);
+            transform: translateY(-1px);
+  }
 }
 
 @keyframes scrollTop {
   from {
-    transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
   }
   to {
-    transform: translateY(-1px);
+    -webkit-transform: translateY(-1px);
+            transform: translateY(-1px);
   }
 }
