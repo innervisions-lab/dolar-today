@@ -169,7 +169,7 @@ export default (params) => {
                     label="Variação Dolar x Real"
                 />
                 <div className="dolarturismo-info">
-                    <h2>Dolar Turismo</h2>
+                    <h2 >Dolar Turismo</h2>
                     <p>
                         Utilizado por pessoas físicas em viagens ao exterior e
                         para a compra de bens e serviços em sites
@@ -188,7 +188,7 @@ export default (params) => {
 
                 <div className="sobreodolar-info">
 
-                    <h2>Notas Atuais</h2>
+                    <h2 >Notas Atuais</h2>
 
                     <Carousel className="Carousel">
                         <Carousel.Item className='carousel-item'>
@@ -317,15 +317,24 @@ export default (params) => {
                                 <p>Desenho no inverso: 	Independence Hall</p>
                             </Carousel.Caption>
                         </Carousel.Item>
+                      
+
+
+                    </Carousel>
+
+<h2>Moedas Atuais</h2>
+
+                    <Carousel className="Carousel">
+                   
                         <Carousel.Item className='carousel-item'>
                             <img
-                                className="carousel-img"
+                                className="carousel-imgM"
                                 src={dollarcentum}
                                 alt="Third slide"
                             />
 
                             <img
-                                className="carousel-imgV"
+                                className="carousel-imgVM"
                                 src={dollarcentumv}
                                 alt="Nota de 1 Dolar"
                             />
@@ -337,14 +346,14 @@ export default (params) => {
                         </Carousel.Item>
                         <Carousel.Item className='carousel-item'>
                             <img
-                                className="carousel-img"
+                                className="carousel-imgM"
                                 src={dollarcentcinco}
                                 alt="Third slide"
                             />
 
 
                             <img
-                                className="carousel-imgV"
+                                className="carousel-imgVM"
                                 src={dollarcentcincov}
                                 alt="Nota de 1 Dolar"
                             />
@@ -355,13 +364,13 @@ export default (params) => {
                         </Carousel.Item>
                         <Carousel.Item className='carousel-item'>
                             <img
-                                className="carousel-img"
+                                className="carousel-imgM"
                                 src={dollarcentdez}
                                 alt="Third slide"
                             />
 
                             <img
-                                className="carousel-imgV"
+                                className="carousel-imgVM"
                                 src={dollarcentdezv}
                                 alt="Nota de 1 Dolar"
                             />
@@ -373,14 +382,14 @@ export default (params) => {
                         </Carousel.Item>
                         <Carousel.Item className='carousel-item'>
                             <img
-                                className="carousel-img"
+                                className="carousel-imgM"
                                 src={dollarcent25}
                                 alt="Third slide"
                             />
 
 
                             <img
-                                className="carousel-imgV"
+                                className="carousel-imgVM"
                                 src={dollarcent25v}
                                 alt="Nota de 1 Dolar"
                             />
@@ -392,13 +401,13 @@ export default (params) => {
                         </Carousel.Item>
                         <Carousel.Item className='carousel-item'>
                             <img
-                                className="carousel-img"
+                                className="carousel-imgM"
                                 src={dollarcent50}
                                 alt="Third slide"
                             />
 
                             <img
-                                className="carousel-imgV"
+                                className="carousel-imgVM"
                                 src={dollarcent50v}
                                 alt="Nota de 1 Dolar"
                             />

@@ -125,56 +125,78 @@
         }
     }
 
+    h2{
+
+        width: 100%;
+        font-family: Mont-Medium;
+        font-size: 3rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        color: #125c6d;
+        text-align: center;
+    }
+
     .Carousel {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 700px;
-        height: 500px;
+        text-align: center;
+        width: 1000px;
+        height: 900px;
         flex-direction: column;
-        left: 30%;
 
         .carousel-item {
             
-            width: 700px;
-            height: 500px;
-            border: 10px red solid;
+            width: 900px;
+            height: 800px;
 
             .carousel-img {
-                width: 330px;
-                height: 180px;
+                width: 600px;
+                height: 280px;
                 position: absolute;
-                top: 1em;
-                left: 14em;
+                top: 0em;
+                left: 10em;
             }
 
             .carousel-imgV {
-                width: 330px;
-                height: 180px;
+                width: 600px;
+                height: 280px;
                 position: absolute;
-                top: 13em;
-                left: 14em;
+                top: 19em;
+                left: 10em;
             }
+
+            .carousel-imgM {
+                width: 400px;
+                height: 300px;
+                position: absolute;
+                top: 0em;
+                left: 12em;
+            }
+       
+
+            .carousel-imgVM {
+                width: 400PX;
+                height: 300px;
+                position: absolute;
+                top: 19em;
+                left: 12em;
+            }
+
 
             .carousel-caption {
                 bottom: 0;
                 color: black;
                 border-bottom: 2px;
-                border: 10px coral solid;
-
-                h3 {
-                    font-size: 10px;
-                    bottom: 10em;
-                    font-style: normal;
-                }
 
                 p {
-                    font-size: 10px;
-                    bottom: 15em;
-                    left: 14em;
+                    font-size: 22px;
+                    bottom: 10em;
                     font-style: normal;
-
+                    font-family: Mont-Medium;
                 }
+
+            
             }
         }
     }

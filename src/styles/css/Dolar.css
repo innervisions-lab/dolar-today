@@ -176,6 +176,16 @@
   margin-top: 3em;
 }
 
+.dolar-info h2 {
+  width: 100%;
+  font-family: Mont-Medium;
+  font-size: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: #125c6d;
+  text-align: center;
+}
+
 .dolar-info .Carousel {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -186,55 +196,63 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 700px;
-  height: 500px;
+  text-align: center;
+  width: 1000px;
+  height: 900px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  left: 30%;
 }
 
 .dolar-info .Carousel .carousel-item {
-  width: 700px;
-  height: 500px;
-  border: 10px red solid;
+  width: 900px;
+  height: 800px;
 }
 
 .dolar-info .Carousel .carousel-item .carousel-img {
-  width: 330px;
-  height: 180px;
+  width: 600px;
+  height: 280px;
   position: absolute;
-  top: 1em;
-  left: 14em;
+  top: 0em;
+  left: 10em;
 }
 
 .dolar-info .Carousel .carousel-item .carousel-imgV {
-  width: 330px;
-  height: 180px;
+  width: 600px;
+  height: 280px;
   position: absolute;
-  top: 13em;
-  left: 14em;
+  top: 19em;
+  left: 10em;
+}
+
+.dolar-info .Carousel .carousel-item .carousel-imgM {
+  width: 400px;
+  height: 300px;
+  position: absolute;
+  top: 0em;
+  left: 12em;
+}
+
+.dolar-info .Carousel .carousel-item .carousel-imgVM {
+  width: 400PX;
+  height: 300px;
+  position: absolute;
+  top: 19em;
+  left: 12em;
 }
 
 .dolar-info .Carousel .carousel-item .carousel-caption {
   bottom: 0;
   color: black;
   border-bottom: 2px;
-  border: 10px coral solid;
-}
-
-.dolar-info .Carousel .carousel-item .carousel-caption h3 {
-  font-size: 10px;
-  bottom: 10em;
-  font-style: normal;
 }
 
 .dolar-info .Carousel .carousel-item .carousel-caption p {
-  font-size: 10px;
-  bottom: 15em;
-  left: 14em;
+  font-size: 22px;
+  bottom: 10em;
   font-style: normal;
+  font-family: Mont-Medium;
 }
 
 @media (max-width: 800px) {
