@@ -13,7 +13,6 @@
     "chartjs-plugin-deferred": "^1.0.1",
     "node": "^14.4.0",
     "react": "^16.13.1",
-    "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-bootstrap": "^1.2.2",
     "react-bootstrap-carousel": "^4.0.6",
     "react-chartjs-2": "^2.9.0",

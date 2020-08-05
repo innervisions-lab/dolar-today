@@ -186,15 +186,10 @@
   text-align: center;
 }
 
-.dolar-info .sobreodolar-info {
-  border: 0.2rem solid #a7092a;
+.dolar-info .Carousel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -202,9 +197,6 @@
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-}
-
-.dolar-info .sobreodolar-info .Carousel {
   width: 1000px;
   height: 900px;
   -webkit-box-orient: vertical;
@@ -213,12 +205,12 @@
           flex-direction: column;
 }
 
-.dolar-info .sobreodolar-info .Carousel .carousel-item {
+.dolar-info .Carousel .carousel-item {
   width: 900px;
   height: 800px;
 }
 
-.dolar-info .sobreodolar-info .Carousel .carousel-item .carousel-img {
+.dolar-info .Carousel .carousel-item .carousel-img {
   width: 600px;
   height: 280px;
   position: absolute;
@@ -226,7 +218,7 @@
   left: 10em;
 }
 
-.dolar-info .sobreodolar-info .Carousel .carousel-item .carousel-imgV {
+.dolar-info .Carousel .carousel-item .carousel-imgV {
   width: 600px;
   height: 280px;
   position: absolute;
@@ -234,7 +226,7 @@
   left: 10em;
 }
 
-.dolar-info .sobreodolar-info .Carousel .carousel-item .carousel-imgM {
+.dolar-info .Carousel .carousel-item .carousel-imgM {
   width: 400px;
   height: 300px;
   position: absolute;
@@ -242,7 +234,7 @@
   left: 12em;
 }
 
-.dolar-info .sobreodolar-info .Carousel .carousel-item .carousel-imgVM {
+.dolar-info .Carousel .carousel-item .carousel-imgVM {
   width: 400PX;
   height: 300px;
   position: absolute;
@@ -250,13 +242,13 @@
   left: 12em;
 }
 
-.dolar-info .sobreodolar-info .Carousel .carousel-item .carousel-caption {
+.dolar-info .Carousel .carousel-item .carousel-caption {
   bottom: 0;
   color: black;
   border-bottom: 2px;
 }
 
-.dolar-info .sobreodolar-info .Carousel .carousel-item .carousel-caption p {
+.dolar-info .Carousel .carousel-item .carousel-caption p {
   font-size: 22px;
   bottom: 10em;
   font-style: normal;
