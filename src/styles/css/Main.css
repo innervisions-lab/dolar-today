@@ -37,8 +37,7 @@
 @media (max-width: 800px) {
   .main {
     width: 100%;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
     padding: 3em 0em;
   }
 }

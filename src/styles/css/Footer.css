@@ -36,12 +36,8 @@
 
 .footer {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   background: #29313a;
   height: 5em;
   position: relative;
@@ -52,11 +48,7 @@
 
 .footer ul {
   width: 90em;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
+  justify-content: space-between;
   display: inline-flex;
   list-style: none;
 }

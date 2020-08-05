@@ -13,13 +13,9 @@
     "chartjs-plugin-deferred": "^1.0.1",
     "node": "^14.4.0",
     "react": "^16.13.1",
-    "react-bootstrap": "^1.2.2",
-    "react-bootstrap-carousel": "^4.0.6",
     "react-chartjs-2": "^2.9.0",
     "react-dom": "^16.13.1",
-    "react-elastic-carousel": "^0.6.7",
     "react-number-format": "^4.4.1",
-    "react-responsive-carousel": "^3.2.9",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "react-use": "^15.3.2"

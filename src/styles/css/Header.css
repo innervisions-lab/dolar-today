@@ -1,25 +1,18 @@
 .header-container {
   border-bottom: 0.15rem solid;
-  -o-border-image: radial-gradient(ellipse, #e6e9ed, #53b86a) 1;
-     border-image: radial-gradient(ellipse, #e6e9ed, #53b86a) 1;
+  border-image: radial-gradient(ellipse, #e6e9ed, #53b86a) 1;
   background: #f4f9ff;
 }
 
 .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 90em;
   margin: auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   font-family: Mont-Medium;
   padding: 0 3em;
   height: 3.8em;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   background-color: #f4f9ff;
 }
 
@@ -28,8 +21,6 @@
 }
 
 .header .header-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -82,12 +73,8 @@
     background: #e6e9ed;
     width: 50%;
     height: 100%;
-    -webkit-transform: translateX(-50em);
-            transform: translateX(-50em);
-    -webkit-transition: -webkit-transform 0.5s ease-in-out;
-    transition: -webkit-transform 0.5s ease-in-out;
+    transform: translateX(-50em);
     transition: transform 0.5s ease-in-out;
-    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
     border-right: #ccc 0.1em solid;
     opacity: 0.9;
     padding: 2em;
@@ -100,8 +87,7 @@
     border-bottom: 0;
   }
   .header .header-menu.show {
-    -webkit-transform: translateX(-0.5em);
-            transform: translateX(-0.5em);
+    transform: translateX(-0.5em);
   }
   .menu-btn {
     display: block;

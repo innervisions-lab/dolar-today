@@ -1,31 +1,19 @@
 .Dolar {
-  display: -ms-grid;
   display: grid;
   width: 100%;
   height: 35em;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #2f4858;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  background: #2F4858;
 }
 
 .Dolar .main-banner {
   padding: 2em;
   margin-top: 2em;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .Dolar .main-banner img {
@@ -42,12 +30,8 @@
 }
 
 .Dolar .Arrow {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   content: "8644";
   color: #edf1ff;
   font-size: 4rem;
@@ -57,38 +41,24 @@
 .Dolar .conversor-container {
   width: 60em;
   margin: 2em;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   height: 15em;
   font-family: Mont;
 }
 
 .dollar-scroll-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   background: #125c6d;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .dollar-scroll-header .dollar-menu {
   height: 5em;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .dollar-scroll-header .dollar-menu li {
@@ -113,32 +83,18 @@
 }
 
 .dolar-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   background: #edf1ff;
 }
 
 .dolar-info .dolarcomercial-info,
 .dolar-info .dolarturismo-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 50%;
 }
 
@@ -154,7 +110,7 @@
 
 .dolar-info .dolarcomercial-info p,
 .dolar-info .dolarturismo-info p {
-  padding: 0.3em;
+  padding: .3em;
   line-height: 2rem;
   font-family: Roboto;
   font-size: 1.2rem;
@@ -164,7 +120,7 @@
 
 .dolar-info .dolarcomercial-info h3,
 .dolar-info .dolarturismo-info h3 {
-  padding: 0.3em;
+  padding: .3em;
   font-family: Mont-Medium;
   font-size: 1.3rem;
   margin-top: 1rem;
@@ -176,92 +132,21 @@
   margin-top: 3em;
 }
 
-.dolar-info .Carousel {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 700px;
-  height: 500px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  left: 30%;
-}
-
-.dolar-info .Carousel .carousel-item {
-  width: 700px;
-  height: 500px;
-  border: 10px red solid;
-}
-
-.dolar-info .Carousel .carousel-item .carousel-img {
-  width: 330px;
-  height: 180px;
-  position: absolute;
-  top: 1em;
-  left: 14em;
-}
-
-.dolar-info .Carousel .carousel-item .carousel-imgV {
-  width: 330px;
-  height: 180px;
-  position: absolute;
-  top: 13em;
-  left: 14em;
-}
-
-.dolar-info .Carousel .carousel-item .carousel-caption {
-  bottom: 0;
-  color: black;
-  border-bottom: 2px;
-  border: 10px coral solid;
-}
-
-.dolar-info .Carousel .carousel-item .carousel-caption h3 {
-  font-size: 10px;
-  bottom: 10em;
-  font-style: normal;
-}
-
-.dolar-info .Carousel .carousel-item .carousel-caption p {
-  font-size: 10px;
-  bottom: 15em;
-  left: 14em;
-  font-style: normal;
-}
-
 @media (max-width: 800px) {
   .Dolar {
-    -ms-grid-rows: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     height: 50em;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
   }
   .Dolar .main-banner {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     padding: 0;
     margin: 0;
   }
   .Dolar .conversor-container {
     width: 50%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     margin-top: 1em;
     padding: 0;
   }

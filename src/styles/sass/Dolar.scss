@@ -5,7 +5,7 @@
     grid-template-rows: 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
-    background: #2f4858;
+    background: #2F4858;
 
     .main-banner {
         padding: 2em;
@@ -41,6 +41,7 @@
         height: 15em;
         font-family: Mont;
         // border: 0.1em red solid;
+        
     }
 }
 
@@ -88,7 +89,7 @@
     // border: 0.2rem solid #a7092a;
 
     .dolarcomercial-info,
-    .dolarturismo-info {
+    .dolarturismo-info{
         // border: 0.2rem solid #a7092a;
         display: flex;
         flex-direction: column;
@@ -103,7 +104,7 @@
             // border: 0.2rem solid #a7092a;
         }
         p {
-            padding: 0.3em;
+            padding: .3em;
             line-height: 2rem;
             font-family: Roboto;
             font-size: 1.2rem;
@@ -111,7 +112,7 @@
             text-align: justify;
         }
         h3 {
-            padding: 0.3em;
+            padding: .3em;
             font-family: Mont-Medium;
             font-size: 1.3rem;
             margin-top: 1rem;
@@ -119,63 +120,9 @@
             color: #125c6d;
         }
     }
-    .dolarcomercial-info {
-        h2 {
+    .dolarcomercial-info{
+        h2{
             margin-top: 3em;
-        }
-    }
-
-    .Carousel {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 700px;
-        height: 500px;
-        flex-direction: column;
-        left: 30%;
-
-        .carousel-item {
-            
-            width: 700px;
-            height: 500px;
-            border: 10px red solid;
-
-            .carousel-img {
-                width: 330px;
-                height: 180px;
-                position: absolute;
-                top: 1em;
-                left: 14em;
-            }
-
-            .carousel-imgV {
-                width: 330px;
-                height: 180px;
-                position: absolute;
-                top: 13em;
-                left: 14em;
-            }
-
-            .carousel-caption {
-                bottom: 0;
-                color: black;
-                border-bottom: 2px;
-                border: 10px coral solid;
-
-                h3 {
-                    font-size: 10px;
-                    bottom: 10em;
-                    font-style: normal;
-                }
-
-                p {
-                    font-size: 10px;
-                    bottom: 15em;
-                    left: 14em;
-                    font-style: normal;
-
-                }
-            }
         }
     }
 }
@@ -185,19 +132,20 @@
         height: 50em;
         justify-content: center;
         align-items: center;
-        .main-banner {
+        .main-banner{
             display: flex;
-            padding: 0;
+            padding:0;
             margin: 0;
         }
-        .conversor-container {
+        .conversor-container{
             width: 50%;
             flex-direction: column;
             margin-top: 1em;
             padding: 0;
-            .conversor-origem {
+            .conversor-origem{
                 margin-bottom: 3em;
             }
         }
+        
     }
 }
