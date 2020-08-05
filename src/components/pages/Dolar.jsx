@@ -33,7 +33,8 @@ import dollarcent25 from "../../assets/moedas/Moedas americanas/25cent.png";
 import dollarcent25v from "../../assets/moedas/Moedas americanas/25centV.jpg";
 import dollarcent50 from "../../assets/moedas/Moedas americanas/50cent.png";
 import dollarcent50v from "../../assets/moedas/Moedas americanas/50centV.png";
-
+import AnchorLink from 'react-anchor-link-smooth-scroll'
+import Container from 'react-bootstrap-carousel'
 
 
 export default (params) => {
@@ -121,22 +122,24 @@ export default (params) => {
             <nav className="dollar-scroll-header">
                 <ul className="dollar-menu">
                     <li>
-                        <a href="#">Gráfico</a>
+                        <AnchorLink href='#grafico'>Gráfico</AnchorLink>
                     </li>
                     <li>
-                        <a href="#" onClick={goToDC}>Dólar Comercial</a>
+                        <AnchorLink href='#dolarC'>Dólar Comercial</AnchorLink>
                     </li>
                     <li>
-                        <a href="#">Dólar Turismo</a>
+
+                        <AnchorLink href='#dolart'>Dólar Turismo</AnchorLink>
+
                     </li>
                     <li>
-                        <a href="#">Sobre o Dólar</a>
+                        <AnchorLink href='#sobre'>Sobre o Dólar</AnchorLink>
                     </li>
                 </ul>
             </nav>
 
             <section className="dolar-info">
-                <div className="dolarcomercial-info" ref={dolarComercial}>
+                <div className="dolarcomercial-info" id="dolarC">
                     <h2>Dólar Comercial</h2>
 
                     <p>
@@ -162,13 +165,17 @@ export default (params) => {
                         operações realizadas pelo mercado durante o dia.
                     </p>
                 </div>
+
+                <h2 id="grafico">Cotações na ultima semana</h2>
+
                 <Grafico
+
                     className="grafico"
                     moeda="USD"
-                    title="Cotações na ultima semana"
                     label="Variação Dolar x Real"
                 />
-                <div className="dolarturismo-info">
+
+                <div className="dolarturismo-info" id="dolart">
                     <h2 >Dolar Turismo</h2>
                     <p>
                         Utilizado por pessoas físicas em viagens ao exterior e
@@ -186,7 +193,7 @@ export default (params) => {
                     <p>Dólar Paralelo</p>
                 </div>
 
-                <div className="sobreodolar-info">
+                <div className="sobreodolar-info" id="sobre">
 
                     <h2 >Notas Atuais</h2>
 
@@ -317,15 +324,15 @@ export default (params) => {
                                 <p>Desenho no inverso: 	Independence Hall</p>
                             </Carousel.Caption>
                         </Carousel.Item>
-                      
+
 
 
                     </Carousel>
 
-<h2>Moedas Atuais</h2>
+                    <h2>Moedas Atuais</h2>
 
                     <Carousel className="Carousel">
-                   
+
                         <Carousel.Item className='carousel-item'>
                             <img
                                 className="carousel-imgM"
@@ -420,19 +427,7 @@ export default (params) => {
 
 
                     </Carousel>
-                    <p>
-                        {` O dólar dos Estados Unidos (US Dollar, USD, US$) é a
-                        moeda emitida pelos Estados Unidos através da Reserva
-                        Federal dos Estados Unidos.<br></br>
-                        Ele possui moedas de 1, 5, 10, 25, 50 cents e 1 dólar.
-                        As notas que circulam hoje são de 1, 5, 10, 20, 50 e 100
-                        dólares.<br></br>
-                        Ele também é a moeda oficial do Timor-Leste, Equador, El
-                        Salvador, Panamá e Porto Rico. Também é usado
-                        não-oficialmente nas Ilhas Virgens Britânicas, Ilhas
-                        Marshall, Estados Federados da Micronésia, Palau, Turks
-                        e Cacos e Zimbabwe.`}
-                    </p>
+                  
                 </div>
             </section>
         </Fragment >
