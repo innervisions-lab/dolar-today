@@ -34,20 +34,26 @@
   src: url("../fonts/OpenSans-Regular.ttf");
 }
 
+@font-face {
+  font-family: "Mont-Semi";
+  src: url("../fonts/Montserrat-SemiBold.ttf");
+}
+
 .Conversor {
   display: flex;
   flex-direction: column;
   background: #edf1ff;
-  height: 100%;
-  width: 28em;
+  height: 15em;
+  width: 30em;
   border-radius: .2rem;
+  margin: auto;
 }
 
 .Conversor .flag-container {
   display: flex;
-  margin-bottom: 2em;
   align-items: center;
-  padding: 1em 1.5em;
+  height: 30%;
+  padding-left: 1em;
   background: #125c6d;
 }
 
@@ -61,30 +67,32 @@
   color: #edf1ff;
   margin-left: 0.5em;
   font-size: 1.2rem;
+  font-family: Mont;
 }
 
 .Conversor .input-container {
-  display: flex;
-  margin-right: 1em;
-  margin-top: 0.5em;
-  align-self: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 70%;
+  place-items: center;
+  padding: 1em;
 }
 
 .Conversor .input-container p {
-  margin-left: 2em;
-  margin-top: 1em;
+  padding-left: .5em;
 }
 
 .Conversor .input-container p .cifrao {
   font-size: 3rem;
-  color: #000;
-  font-family: Mont-Regular;
+  color: #29313A;
+  font-family: Mont-Semi;
 }
 
 .Conversor .input-container .input-valor {
-  font-family: Quicksand;
-  color: #000;
+  font-family: Mont-Semi;
+  color: #29313A;
   border: none;
+  margin-right: .3em;
   background: #edf1ff;
   border-bottom: 0.03em #ccc solid;
   font-size: 4rem;
@@ -110,18 +118,11 @@
   text-align: center;
 }
 
-.conversor-destino {
-  background: #f4f9ff;
-  border-left: 0.1em white solid;
-}
-
-.conversor-destino .input-container .input-destino {
-  background: #f4f9ff;
-}
-
-@media (max-width: 860px) {
+@media (max-width: 1024px) {
   .Conversor {
-    flex-direction: column;
-    margin: 1em;
+    width: 25em;
+  }
+  .Conversor .input-container .input-valor {
+    width: 4em;
   }
 }

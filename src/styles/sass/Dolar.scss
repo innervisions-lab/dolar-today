@@ -1,18 +1,16 @@
-.Dolar {
+.dollar-main {
     display: grid;
     width: 100%;
     height: 35em;
-    grid-template-rows: 1fr 1fr 1fr;
-    justify-content: center;
-    align-items: center;
-    background: #2F4858;
+    grid-template-rows: repeat(3, 1fr);
+    place-items: center;
+    background: #2f4858;
 
     .main-banner {
         padding: 2em;
         margin-top: 2em;
         display: flex;
         align-items: center;
-        justify-content: center;
         img {
             width: 6em;
             height: 6em;
@@ -32,16 +30,17 @@
         color: #edf1ff;
         font-size: 4rem;
         padding: 0.1em;
+        // width: 10%;
     }
     .conversor-container {
         width: 60em;
         margin: 2em;
         display: flex;
-        justify-content: center;
+        // justify-content: center;
+        // flex-wrap: wrap;
         height: 15em;
         font-family: Mont;
-        // border: 0.1em red solid;
-        
+        border: 0.05em #edf1ff solid;
     }
 }
 
@@ -57,6 +56,8 @@
         // border: 0.05em #edf1ff solid;
         display: flex;
         align-items: center;
+        white-space: nowrap;
+        overflow: auto;
         li {
             //    margin: auto;
             padding: 0 6em;
@@ -89,7 +90,7 @@
     // border: 0.2rem solid #a7092a;
 
     .dolarcomercial-info,
-    .dolarturismo-info{
+    .dolarturismo-info {
         // border: 0.2rem solid #a7092a;
         display: flex;
         flex-direction: column;
@@ -104,7 +105,7 @@
             // border: 0.2rem solid #a7092a;
         }
         p {
-            padding: .3em;
+            padding: 0.3em;
             line-height: 2rem;
             font-family: Roboto;
             font-size: 1.2rem;
@@ -112,7 +113,7 @@
             text-align: justify;
         }
         h3 {
-            padding: .3em;
+            padding: 0.3em;
             font-family: Mont-Medium;
             font-size: 1.3rem;
             margin-top: 1rem;
@@ -120,32 +121,75 @@
             color: #125c6d;
         }
     }
-    .dolarcomercial-info{
-        h2{
+    .dolarcomercial-info {
+        h2 {
             margin-top: 3em;
         }
     }
 }
-@media (max-width: 800px) {
-    .Dolar {
-        grid-template-rows: 1fr 1fr 1fr;
-        height: 50em;
-        justify-content: center;
-        align-items: center;
-        .main-banner{
-            display: flex;
-            padding:0;
-            margin: 0;
+
+
+@media (max-width: 1200px) {
+
+    .dolar-info {
+        .dolarcomercial-info,
+        .dolarturismo-info {
+            width: 60%;
         }
-        .conversor-container{
-            width: 50%;
-            flex-direction: column;
-            margin-top: 1em;
-            padding: 0;
-            .conversor-origem{
-                margin-bottom: 3em;
-            }
-        }
-        
     }
 }
+@media (max-width: 1024px) {
+    .dollar-main {
+        .conversor-container {
+            width: 55em;
+            
+        }
+
+    }
+    .dolar-info {
+        .dolarcomercial-info,
+        .dolarturismo-info {
+            width: 70%;
+        }
+    }
+}
+@media (max-width: 992px) {
+    
+    
+}
+@media (max-width: 860px) {
+    .dolar-info {
+        .dolarcomercial-info,
+        .dolarturismo-info {
+            width: 80%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .dollar-main {
+        height: 40em;
+        // display: flex;
+        // flex-direction: column;
+        .main-banner {
+            // flex-direction: column;
+        }
+
+        .conversor-container {
+            flex-direction: column;
+            height: 30em;
+            width: 30em;
+        }
+        .Arrow {
+            // display: none;
+        }
+    }
+    .dolar-info {
+        .dolarcomercial-info,
+        .dolarturismo-info {
+            width: 80%;
+        }
+    }
+}
+

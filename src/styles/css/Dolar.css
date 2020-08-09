@@ -1,35 +1,33 @@
-.Dolar {
+.dollar-main {
   display: grid;
   width: 100%;
   height: 35em;
-  grid-template-rows: 1fr 1fr 1fr;
-  justify-content: center;
-  align-items: center;
-  background: #2F4858;
+  grid-template-rows: repeat(3, 1fr);
+  place-items: center;
+  background: #2f4858;
 }
 
-.Dolar .main-banner {
+.dollar-main .main-banner {
   padding: 2em;
   margin-top: 2em;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
-.Dolar .main-banner img {
+.dollar-main .main-banner img {
   width: 6em;
   height: 6em;
   border: 0.05em #f4f9ff solid;
 }
 
-.Dolar .main-banner h1 {
+.dollar-main .main-banner h1 {
   margin-left: 0.3em;
   font-family: Mont;
   font-size: 5rem;
   color: #f4f9ff;
 }
 
-.Dolar .Arrow {
+.dollar-main .Arrow {
   display: flex;
   align-items: center;
   content: "8644";
@@ -38,13 +36,13 @@
   padding: 0.1em;
 }
 
-.Dolar .conversor-container {
+.dollar-main .conversor-container {
   width: 60em;
   margin: 2em;
   display: flex;
-  justify-content: center;
   height: 15em;
   font-family: Mont;
+  border: 0.05em #edf1ff solid;
 }
 
 .dollar-scroll-header {
@@ -59,6 +57,8 @@
   height: 5em;
   display: flex;
   align-items: center;
+  white-space: nowrap;
+  overflow: auto;
 }
 
 .dollar-scroll-header .dollar-menu li {
@@ -110,7 +110,7 @@
 
 .dolar-info .dolarcomercial-info p,
 .dolar-info .dolarturismo-info p {
-  padding: .3em;
+  padding: 0.3em;
   line-height: 2rem;
   font-family: Roboto;
   font-size: 1.2rem;
@@ -120,7 +120,7 @@
 
 .dolar-info .dolarcomercial-info h3,
 .dolar-info .dolarturismo-info h3 {
-  padding: .3em;
+  padding: 0.3em;
   font-family: Mont-Medium;
   font-size: 1.3rem;
   margin-top: 1rem;
@@ -132,25 +132,41 @@
   margin-top: 3em;
 }
 
-@media (max-width: 800px) {
-  .Dolar {
-    grid-template-rows: 1fr 1fr 1fr;
-    height: 50em;
-    justify-content: center;
-    align-items: center;
+@media (max-width: 1200px) {
+  .dolar-info .dolarcomercial-info,
+  .dolar-info .dolarturismo-info {
+    width: 60%;
   }
-  .Dolar .main-banner {
-    display: flex;
-    padding: 0;
-    margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .dollar-main .conversor-container {
+    width: 55em;
   }
-  .Dolar .conversor-container {
-    width: 50%;
+  .dolar-info .dolarcomercial-info,
+  .dolar-info .dolarturismo-info {
+    width: 70%;
+  }
+}
+
+@media (max-width: 860px) {
+  .dolar-info .dolarcomercial-info,
+  .dolar-info .dolarturismo-info {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .dollar-main {
+    height: 40em;
+  }
+  .dollar-main .conversor-container {
     flex-direction: column;
-    margin-top: 1em;
-    padding: 0;
+    height: 30em;
+    width: 30em;
   }
-  .Dolar .conversor-container .conversor-origem {
-    margin-bottom: 3em;
+  .dolar-info .dolarcomercial-info,
+  .dolar-info .dolarturismo-info {
+    width: 80%;
   }
 }

@@ -34,6 +34,11 @@
   src: url("../fonts/OpenSans-Regular.ttf");
 }
 
+@font-face {
+  font-family: "Mont-Semi";
+  src: url("../fonts/Montserrat-SemiBold.ttf");
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -63,9 +68,7 @@ ul {
 .app {
   position: relative;
   height: 100%;
-  display: flex;
-  background-color: gray;
-  flex-direction: column;
+  background-color: #f4f9ff;
 }
 
 .scroll-to-top {

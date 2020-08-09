@@ -13,7 +13,7 @@ export default (props) => {
             </div>
 
             <div className="input-container">
-                <p className>
+                <p >
                     <span className="cifrao">{cifrao}</span>
                 </p>
                 {/* <input

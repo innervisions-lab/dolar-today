@@ -7,7 +7,7 @@
 
 .header {
     display: flex;
-    width: 90em;
+    width: 90%;
     margin: auto;
     align-items: center;
     font-family: Mont-Medium;
@@ -55,7 +55,7 @@
     display: none;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 768px) {
     .header {
         height: 3em;
         width: 100%;

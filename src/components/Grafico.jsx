@@ -2,77 +2,45 @@ import React, { useState, useEffect } from "react";
 import "../styles/css/Grafico.css";
 import axios from "axios";
 import Chart from "chart.js";
+import { Line } from "react-chartjs-2";
+import BuscarVariacao from "./BuscarVariacao";
 
 export default (props) => {
-    useEffect(() => {
-        buscarVariacao();
-    }, []);
+    const { color1, color2, color3, color4 } = props;
 
-    const buscarVariacao = async () => {
-        const dataAtual = new Date();
-        const diaAtual = dataAtual.getDate();
-        const mesAtual =
-            dataAtual.getMonth() > 8
-                ? dataAtual.getMonth() + 1
-                : `0${dataAtual.getMonth() + 1}`;
-        const anoAtual = dataAtual.getFullYear();
-        const dataInicio = `${anoAtual}-${mesAtual}-${diaAtual - 15}`;
-        const dataFinal = `${anoAtual}-${mesAtual}-${diaAtual}`;
+    const [myChart, setChart] = useState(false);
+    const [chartSwitch, setChartSwitch] = useState(false);
 
-        console.log(dataInicio);
-
-        const result = await axios({
-            method: "GET",
-            url: `https://api.exchangerate.host/timeseries?start_date=${dataInicio}&end_date=${dataFinal}&base=${props.moeda}&symbols=BRL`,
-        })
-            .then((response) => {
-                return Object.entries(response.data.rates);
-            })
-            .catch((error) => {
-                console.log(error);
-            });
-
-        const variacaoValores = [];
-        const variacaoDatas = [];
-        const arr = result.sort();
-        const date = new Date();
-        const month = date.toLocaleString("pt", { month: "short" });
-        arr.forEach(([key, value]) => {
-            variacaoValores.push(value.BRL.toFixed(2));
-            variacaoDatas.push(`${month.toUpperCase()} ${key.split("-")[2]}`);
-        });
-
-        Charts(variacaoValores, variacaoDatas);
-    };
-
-    const Charts = (variacaoValores, variacaoDatas) => {
+    const lineChart = (Dates, Values) => {
         const ctx = document.getElementById("myChart").getContext("2d");
         const width = window.innerWidth || document.body.clientWidth;
         const gradientStroke = ctx.createLinearGradient(0, 0, width, 0);
-        gradientStroke.addColorStop(0, "#7C4DFF");
-        gradientStroke.addColorStop(0.3, "#448AFF");
-        gradientStroke.addColorStop(0.6, "#00BCD4");
-        gradientStroke.addColorStop(1, "#1DE9B6");
-
+        gradientStroke.addColorStop(0, color1);
+        gradientStroke.addColorStop(0.3, color2);
+        gradientStroke.addColorStop(0.6, color3);
+        gradientStroke.addColorStop(1, color4);
         const myChart = new Chart(ctx, {
             type: "line",
             data: {
-                labels: variacaoDatas,
+                labels: Dates,
                 datasets: [
                     {
+                        data: Values,
+                        lineTension: 0,
                         label: `${props.label}`,
                         borderColor: gradientStroke,
                         pointBorderColor: gradientStroke,
                         pointBackgroundColor: gradientStroke,
                         pointHoverBackgroundColor: gradientStroke,
                         pointHoverBorderColor: gradientStroke,
+                        backgroundColor: gradientStroke,
+                        hoverBackgroundColor: "#000",
                         pointBorderWidth: 8,
                         pointHoverRadius: 8,
                         pointHoverBorderWidth: 1,
                         pointRadius: 2,
                         fill: false,
                         borderWidth: 4,
-                        data: variacaoValores,
                     },
                 ],
             },
@@ -93,7 +61,7 @@ export default (props) => {
                 deferred: {
                     // xOffset: 150, // defer until 150px of the canvas width are inside the viewport
                     // yOffset: "50%", // defer until 50% of the canvas height are inside the viewport
-                    delay: 50000, // delay of 500 ms after the canvas is considered inside the viewport
+                    // // delay: 50000, // delay of 500 ms after the canvas is considered inside the viewport
                 },
                 scales: {
                     yAxes: [
@@ -103,7 +71,7 @@ export default (props) => {
                                 fontColor: "#008570",
                                 fontStyle: "bold",
                                 //   beginAtZero: true,
-                                maxTicksLimit: 5,
+                                maxTicksLimit: 10,
                                 padding: 20,
                                 maxRotation: 50,
                                 minRotation: 50,
@@ -126,7 +94,7 @@ export default (props) => {
                                 fontColor: "#007176",
                                 fontStyle: "bold",
                                 fontFamily: "Quicksand",
-                                maxTicksLimit: 15,
+                                maxTicksLimit: 30,
                                 maxRotation: 50,
                                 minRotation: 50,
                             },
@@ -141,13 +109,82 @@ export default (props) => {
                 },
             },
         });
+        setChart(myChart);
+    };
+    const handleClickWeek = (params) => {
+        setChartSwitch("week");
+    };
+    const handleClickHM = (params) => {
+        setChartSwitch("half");
+    };
+    const handleClickMonth = (params) => {
+        setChartSwitch("month");
+    };
+    const handleClickYear = (params) => {
+        setChartSwitch("year");
+    };
+    const handleclick = async () => {
+        if (chartSwitch === "week") {
+            const data = await BuscarVariacao(7, props.moeda).then();
+            updateChart(data.values, data.dates);
+        } else if (chartSwitch === "half") {
+            console.log("hey");
+            const data = await BuscarVariacao(15, props.moeda);
+            updateChart(data.values, data.dates);
+        } else if (chartSwitch === "month") {
+            console.log("hey");
+            const data = await BuscarVariacao(30, props.moeda);
+            updateChart(data.values, data.dates);
+        } 
+        else if (chartSwitch === "year") {
+            console.log("hey");
+            const data = await BuscarVariacao(360, props.moeda);
+            updateChart(data.values, data.dates);
+        } 
+    };
+    const updateChart = (values, dates) => {
+        myChart.data.datasets[0].data = values;
+        myChart.data.labels = dates;
+        myChart.update();
     };
 
+    const lineChartInit = async () => {
+        const data = await BuscarVariacao(7, props.moeda);
+        lineChart(data.dates, data.values);
+    };
+
+    useEffect(() => {
+        lineChartInit();
+    }, []);
+
+    useEffect(() => {
+        if (myChart) {
+            console.log(chartSwitch);
+            handleclick();
+        }
+    }, [chartSwitch]);
+
     return (
-        <div className="grafico-container">
-            <header className="grafico-header">
+        <div className="chart-container">
+            <header className="chart-header">
                 <h2>{props.title}</h2>
             </header>
+            <nav className="chart-nav">
+                <ul className="chart-buttons">
+                    <li className="chart-button">
+                        <button onClick={handleClickWeek}>1 Semana</button>
+                    </li>
+                    <li className="chart-button">
+                        <button onClick={handleClickHM}>15 Dias</button>
+                    </li>
+                    <li className="chart-button">
+                        <button onClick={handleClickMonth}>1 Mês</button>
+                    </li>
+                    <li className="chart-button">
+                        <button onClick={handleClickYear}>1 Ano</button>
+                    </li>
+                </ul>
+            </nav>
             <div className="Grafico" id="line-chart">
                 <canvas id="myChart"></canvas>
             </div>

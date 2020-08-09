@@ -34,6 +34,11 @@
   src: url("../fonts/OpenSans-Regular.ttf");
 }
 
+@font-face {
+  font-family: "Mont-Semi";
+  src: url("../fonts/Montserrat-SemiBold.ttf");
+}
+
 .footer {
   width: 100%;
   display: flex;

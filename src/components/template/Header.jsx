@@ -37,7 +37,7 @@ export default (props) => {
                 <a
                     href="#"
                     className="Sobre"
-                    onClick="document.getElementById('middle').scrollIntoView(true);"
+                    
                 >
                     Sobre
                 </a>

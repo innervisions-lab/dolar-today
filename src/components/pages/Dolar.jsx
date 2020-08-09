@@ -8,6 +8,8 @@ import Origem_Flag_Icon from "../../assets/icons/us.png";
 import Destino_Flag_Icon from "../../assets/icons/br.png";
 import ScrollToTop from "../ScrollToTop";
 import { useRef } from "react";
+import BuscarVariacao from "../BuscarVariacao";
+import Chart2 from "../Chart2";
 
 export default (params) => {
     const [Cambio, setCambio] = useState("");
@@ -25,6 +27,7 @@ export default (params) => {
 
     useEffect(() => {
         buscar();
+        buscarVariacao();
     }, []);
 
     const buscar = async () => {
@@ -44,6 +47,34 @@ export default (params) => {
         setaorigemInput("destino");
     };
 
+    /********** */
+    const [graphSwitch, setGraphSwitch] = useState(false);
+    const [Values, setValues] = useState([]);
+    const [Dates, setDates] = useState([]);
+
+    const handleclick = async () => {
+        graphSwitch ? setGraphSwitch(false) : setGraphSwitch(true);
+        console.log("click");
+        console.log(graphSwitch);
+        if (!graphSwitch) {
+            const data = await BuscarVariacao(30, "USD");
+            setValues(data.values);
+            setDates(data.dates);
+            console.log("okoko");
+        } else {
+            const data = await BuscarVariacao(15, "USD");
+            setValues(data.values);
+            setDates(data.dates);
+            console.log("kkk");
+        }
+    };
+    const buscarVariacao = async () => {
+        const data = await BuscarVariacao(15, "USD");
+            setValues(data.values);
+            setDates(data.dates);
+    };
+    /********************** */
+
     const dolarComercial = useRef(null);
     const goToDC = () =>
         window.scrollTo({
@@ -54,7 +85,7 @@ export default (params) => {
     return (
         <Fragment>
             <ScrollToTop />
-            <section className="Dolar">
+            <section className="dollar-main">
                 <div className="main-banner">
                     <img src={Banner_Flag} alt="" />
                     <h1>Dólar Hoje</h1>
@@ -81,10 +112,12 @@ export default (params) => {
             <nav className="dollar-scroll-header">
                 <ul className="dollar-menu">
                     <li>
-                        <a href="#">Gráfico</a>
+                        <a href="#grafico">Gráfico</a>
                     </li>
                     <li>
-                        <a href="#" onClick={goToDC}>Dólar Comercial</a>
+                        <a href="#dolarcomercial" onClick={goToDC}>
+                            Dólar Comercial
+                        </a>
                     </li>
                     <li>
                         <a href="#">Dólar Turismo</a>
@@ -127,7 +160,23 @@ export default (params) => {
                     moeda="USD"
                     title="Cotações na ultima semana"
                     label="Variação Dolar x Real"
+                    color1="#7C4DFF"
+                    color2="#448AFF"
+                    color3="#00BCD4"
+                    color4="#1DE9B6"
+                    
                 />
+                {/* <Chart2
+                    className="grafico"
+                    moeda="USD"
+                    title="Cotações na ultima semana"
+                    label="Variação Dolar x Real"
+                    color1="#7C4DFF"
+                    color2="#448AFF"
+                    color3="#00BCD4"
+                    color4="#1DE9B6"
+                    
+                /> */}
                 <div className="dolarturismo-info">
                     <h2>Dolar Turismo</h2>
                     <p>
