@@ -5,6 +5,7 @@
   grid-template-rows: repeat(3, 1fr);
   place-items: center;
   background: #2f4858;
+  padding-top: 3.8em;
 }
 
 .dollar-main .main-banner {

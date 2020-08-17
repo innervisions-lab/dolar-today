@@ -50,6 +50,10 @@ export default (props) => {
                 legend: {
                     display: false,
                 },
+                animation:{
+                    duration: 1000,
+                    easing: 'linear'
+                },
                 tooltips: {
                     mode: "index",
                     intersect: false,
@@ -94,7 +98,7 @@ export default (props) => {
                                 fontColor: "#007176",
                                 fontStyle: "bold",
                                 fontFamily: "Quicksand",
-                                maxTicksLimit: 30,
+                                maxTicksLimit: 10,
                                 maxRotation: 50,
                                 minRotation: 50,
                             },

@@ -50,11 +50,14 @@ body {
   font-size: 1rem;
   overflow: hidden;
   background: #f4f9ff;
+  height: auto;
   min-height: 100vh;
+  scroll-padding-top: 3.8em;
 }
 
 html {
   overflow: auto;
+  scroll-padding-top: 3.8em;
 }
 
 a {
@@ -67,7 +70,7 @@ ul {
 
 .app {
   position: relative;
-  height: 100%;
+  min-height: 100%;
   background-color: #f4f9ff;
 }
 

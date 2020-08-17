@@ -7,11 +7,11 @@ import Router from "../routes/routes";
 export default (props) => {
     return (
         <BrowserRouter>
-            <section className="app">
                 <Header />
+            <section className="app">
                 <Router />
-                <Footer />
             </section>
+                <Footer />
         </BrowserRouter>
     );
 };

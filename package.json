@@ -10,6 +10,7 @@
     "axios": "^0.19.2",
     "chart.js": "^2.9.3",
     "chartjs-plugin-deferred": "^1.0.1",
+    "jquery": "^3.5.1",
     "moment": "^2.27.0",
     "node": "^14.4.0",
     "react": "^16.13.1",

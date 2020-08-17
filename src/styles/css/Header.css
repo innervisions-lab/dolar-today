@@ -2,6 +2,10 @@
   border-bottom: 0.15rem solid;
   border-image: radial-gradient(ellipse, #e6e9ed, #53b86a) 1;
   background: #f4f9ff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 .header {

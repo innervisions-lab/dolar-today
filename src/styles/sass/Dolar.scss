@@ -5,7 +5,8 @@
     grid-template-rows: repeat(3, 1fr);
     place-items: center;
     background: #2f4858;
-
+    padding-top: 3.8em;
+    
     .main-banner {
         padding: 2em;
         margin-top: 2em;
@@ -128,9 +129,7 @@
     }
 }
 
-
 @media (max-width: 1200px) {
-
     .dolar-info {
         .dolarcomercial-info,
         .dolarturismo-info {
@@ -142,9 +141,7 @@
     .dollar-main {
         .conversor-container {
             width: 55em;
-            
         }
-
     }
     .dolar-info {
         .dolarcomercial-info,
@@ -154,8 +151,6 @@
     }
 }
 @media (max-width: 992px) {
-    
-    
 }
 @media (max-width: 860px) {
     .dolar-info {
@@ -167,7 +162,6 @@
 }
 
 @media (max-width: 768px) {
-
     .dollar-main {
         height: 40em;
         // display: flex;
@@ -192,4 +186,3 @@
         }
     }
 }
-
